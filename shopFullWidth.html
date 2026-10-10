@@ -1,0 +1,1917 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce - Shop</title>
+    
+    
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+</body>
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+   
+         <link rel="stylesheet" href="style.css">
+ <style>
+  /*  Featured Carousel */
+.featured-card {
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 12px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-card:hover {
+    border: 2px solid  #f5a623 !important;
+    padding: calc(0.75rem - 1px);  
+    box-shadow: 0 4px 14px rgba(245, 166, 35, 0.15);
+}     
+       
+       
+       
+ </style>
+    
+</head>    
+<body>
+
+         <!-- top bar -->
+    <div class="top-bar py-2 border-bottom text-secondary" style="font-size: 0.85rem;">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="top-links d-none d-md-flex align-items-center gap-2">
+                <a href="#" class="text-decoration-none text-secondary">About us</a>
+                <span class="text-muted">|</span>
+                <a href="#" class="text-decoration-none text-secondary">Careers</a>
+                <span class="text-muted">|</span>
+                <a href="#" class="text-decoration-none text-secondary">Open a shop</a>
+            </div>
+            <div class="top-promo">
+                <span>Free shipping for all orders over <strong class="text-success">$75.00</strong></span>
+            </div>
+            <div class="top-right d-flex align-items-center gap-3">
+                <span class="d-none d-lg-inline">Need help? Call Us: <strong class="text-success">+ 1800 900</strong></span>
+                <div class="dropdown">
+                    <button class="btn btn-sm dropdown-toggle p-0 text-secondary border-0" type="button" data-bs-toggle="dropdown">
+                        <span class="me-1">🇬🇧</span> English
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                        <li><a class="dropdown-item active-lang" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">Français</a></li>
+                        <li><a class="dropdown-item" href="#">Español</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-sm dropdown-toggle p-0 text-secondary border-0" type="button" data-bs-toggle="dropdown">USD</button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                        <li><a class="dropdown-item" href="#">USD</a></li>
+                        <li><a class="dropdown-item" href="#">EUR</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+          <!-- header -->
+    <header class="py-3 bg-white border-bottom">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#" class="navbar-brand text-primary fw-bold fs-3">
+                <img src="./images/logo.svg" alt="Ecom Logo" style="max-height: 50px;">
+            </a>
+            <div class="search-box d-none d-lg-flex align-items-center border rounded-2 px-2 py-1 mx-3 flex-grow-1" style="max-width: 420px">
+                <select class="form-select border-0 shadow-none fw-semibold text-secondary w-auto py-0 pe-4" style="background: transparent; font-size: 0.85rem">
+                    <option selected>All categories</option>
+                    <option value="1">Electronics</option>
+                    <option value="2">Fashion</option>
+                    <option value="3">Home &amp; Garden</option>
+                </select>
+                <span class="border-end mx-2" style="height: 20px"></span>
+                <input type="text" class="form-control border-0 shadow-none p-0 flex-grow-1" placeholder="Search for items" style="font-size: 0.85rem">
+                <button class="btn btn-sm text-secondary border-0 p-0 ms-2" type="button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <nav class="d-none d-md-block">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#">Vendors</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#">Pages</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="d-flex align-items-center gap-3 ms-3">
+                <a href="#" class="text-secondary fs-5 text-decoration-none"><i class="fa-regular fa-user"></i></a>
+                <a href="#" class="text-secondary fs-5 text-decoration-none position-relative"><i class="fa-solid fa-arrows-rotate"></i></a>
+                <a href="#" class="text-secondary fs-5 text-decoration-none position-relative">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">5</span>
+                </a>
+                <a href="#" class="text-secondary fs-5 text-decoration-none position-relative">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">2</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+  
+           <!-- breadcrumbs -->
+    <nav aria-label="breadcrumb" class="bg-light py-2">
+        <div class="container">
+            <ol class="breadcrumb mb-0 flex-nowrap overflow-auto small">
+                <li class="breadcrumb-item"><a class="text-decoration-none text-secondary" href="#">Home</a></li>
+                <li class="breadcrumb-item"><a class="text-decoration-none text-secondary" href="#">Electronics</a></li>
+                <li class="breadcrumb-item"><a class="text-decoration-none text-secondary" href="#">Cell phone</a></li>
+                <li class="breadcrumb-item active text-dark fw-semibold" aria-current="page">Accessories</li>
+            </ol>
+        </div>
+    </nav>
+    
+     <!-- featured carousel-->
+
+<section class="container my-4 mt-5" aria-label="Featured products">
+    <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+
+        <!--  -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="3"></button>
+        </div>
+
+        <div class="carousel-inner rounded-3 overflow-hidden">
+
+            <!-- Slide 1  -->
+            <div class="carousel-item active">
+                <article class="featured-card card rounded-3 p-3 position-relative"
+                         style="background:#fff; min-height:200px;">
+
+                    <span class="badge position-absolute rounded-pill fw-bold"
+                          style="background:#f5a623; color:#fff; font-size:0.85rem;
+                                 padding:6px 14px; top:15px; left:15px; z-index:3;">
+                        −12%
+                    </span>
+
+                    <div class="row align-items-center g-2 h-100 m-0">
+                      
+                        <div class="col-4 col-md-3">
+                            <div class="d-flex align-items-center justify-content-center"
+                                 style="height:150px;">
+          <img src="./imageeee/special1.png" alt="Office chair"
+                                     class="img-fluid"
+                                     style="max-height:100%; max-width:100%; object-fit:contain;">
+                            </div>
+                        </div>
+
+                       
+                        <div class="col-8 col-md-9 text-start">
+                            <div class="small mb-1" style="color:#b0c2d4; font-weight:600;">
+                                YSSOA Store
+                            </div>
+                            <h5 class="fw-bold mb-2" style="color:#2c3e50; line-height:1.35; font-size:1rem;">
+                                Chair Mesh Ergonomic Adjustable Swivel Task Chair with Headrest
+                            </h5>
+                            <div class="mb-2" style="color:#f5a623; font-size:0.95rem;">
+                                ★★★★★ <span style="color:#9ca3af; font-size:0.85rem;">(65)</span>
+                            </div>
+                            <div class="d-flex align-items-baseline gap-2">
+                                <span class="fw-bold" style="color:#2c3e50; font-size:1.35rem;">$2556.3</span>
+                                <span class="text-decoration-line-through" style="color:#b0c2d4; font-size:0.95rem;">$3225.6</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+
+            <!-- Slide 2  -->
+            <div class="carousel-item">
+                <article class="featured-card card rounded-3 p-3 position-relative"
+                         style="background:#fff; min-height:200px;">
+
+                    <span class="badge position-absolute rounded-pill fw-bold"
+                          style="background:#f5a623; color:#fff; font-size:0.85rem;
+                                 padding:6px 14px; top:15px; left:15px; z-index:3;">
+                        −17%
+                    </span>
+
+                    <div class="row align-items-center g-2 h-100 m-0">
+                        <div class="col-4 col-md-3">
+                            <div class="d-flex align-items-center justify-content-center"
+                                 style="height:150px;">
+           <img src="./imageeee/special2.png" alt="Samsung phone"
+                                     class="img-fluid"
+                                     style="max-height:100%; max-width:100%; object-fit:contain;">
+                            </div>
+                        </div>
+
+                        <div class="col-8 col-md-9 text-start">
+                            <div class="small mb-1" style="color:#b0c2d4; font-weight:600;">
+                                Apple
+                            </div>
+                            <h5 class="fw-bold mb-2" style="color:#2c3e50; line-height:1.35; font-size:1rem;">
+                                Straight Talk Samsung Galaxy A03s, 32GB, Black
+                            </h5>
+                            <div class="mb-2" style="color:#f5a623; font-size:0.95rem;">
+                                ★★★★★ <span style="color:#9ca3af; font-size:0.85rem;">(65)</span>
+                            </div>
+                            <div class="d-flex align-items-baseline gap-2">
+                                <span class="fw-bold" style="color:#2c3e50; font-size:1.35rem;">$2556.3</span>
+                                <span class="text-decoration-line-through" style="color:#b0c2d4; font-size:0.95rem;">$3225.6</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <article class="featured-card card rounded-3 p-3 position-relative"
+                         style="background:#fff; min-height:200px;">
+
+                    <span class="badge position-absolute rounded-pill fw-bold"
+                          style="background:#f5a623; color:#fff; font-size:0.85rem;
+                                 padding:6px 14px; top:15px; left:15px; z-index:3;">
+                        −20%
+                    </span>
+
+                    <div class="row align-items-center g-2 h-100 m-0">
+                        <div class="col-4 col-md-3">
+                            <div class="d-flex align-items-center justify-content-center"
+                                 style="height:150px;">
+                                <img src="./imageeee/special3.png" alt="iMac"
+                                     class="img-fluid"
+                                     style="max-height:100%; max-width:100%; object-fit:contain;">
+                            </div>
+                        </div>
+
+                        <div class="col-8 col-md-9 text-start">
+                            <div class="small mb-1" style="color:#b0c2d4; font-weight:600;">
+                                Apple
+                            </div>
+                            <h5 class="fw-bold mb-2" style="color:#2c3e50; line-height:1.35; font-size:1rem;">
+                                iMac MNE92LL/A 27 Inch, 3.4 GHz Intel Core i5, 8GB RAM, 1TB Drive
+                            </h5>
+                            <div class="mb-2" style="color:#f5a623; font-size:0.95rem;">
+                                ★★★★★ <span style="color:#9ca3af; font-size:0.85rem;">(65)</span>
+                            </div>
+                            <div class="d-flex align-items-baseline gap-2">
+                                <span class="fw-bold" style="color:#2c3e50; font-size:1.35rem;">$2556.3</span>
+                                <span class="text-decoration-line-through" style="color:#b0c2d4; font-size:0.95rem;">$3225.6</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+                <article class="featured-card card rounded-3 p-3 position-relative"
+                         style="background:#fff; min-height:200px;">
+
+                    <span class="badge position-absolute rounded-pill fw-bold"
+                          style="background:#f5a623; color:#fff; font-size:0.85rem;
+                                 padding:6px 14px; top:15px; left:15px; z-index:3;">
+                        −22%
+                    </span>
+
+                    <div class="row align-items-center g-2 h-100 m-0">
+                        <div class="col-4 col-md-3">
+                            <div class="d-flex align-items-center justify-content-center"
+                                 style="height:150px;">
+                                <img src="./imageeee/special.png" alt="Apple Watch"
+                                     class="img-fluid"
+                                     style="max-height:100%; max-width:100%; object-fit:contain;">
+                            </div>
+                        </div>
+
+                        <div class="col-8 col-md-9 text-start">
+                            <div class="small mb-1" style="color:#b0c2d4; font-weight:600;">
+                                Apple
+                            </div>
+                            <h5 class="fw-bold mb-2" style="color:#2c3e50; line-height:1.35; font-size:1rem;">
+                                Apple Watch Series 8 [GPS 45mm] Smart Watch w/ Midnight Case
+                            </h5>
+                            <div class="mb-2" style="color:#f5a623; font-size:0.95rem;">
+                                ★★★★★ <span style="color:#9ca3af; font-size:0.85rem;">(65)</span>
+                            </div>
+                            <div class="d-flex align-items-baseline gap-2">
+                                <span class="fw-bold" style="color:#2c3e50; font-size:1.35rem;">$2556.3</span>
+                                <span class="text-decoration-line-through" style="color:#b0c2d4; font-size:0.95rem;">$3225.6</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+
+        </div>
+
+        <!-- buttons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+</section>
+    <!--  --> <!--  -->
+    
+<section class="container my-4 mt-5" aria-label="Big deal">
+    <div class="text-center rounded-4 py-4 py-md-5 px-3"
+         style="background:#dff2f7;">
+
+        <!-- Badge -->
+        <span class="d-inline-block text-white fw-normal rounded-pill
+                     px-3 px-md-4 py-2 mb-3 mb-md-4"
+              style="background:#29b8c9; font-size:0.95rem;">
+            Big deal
+        </span>
+
+        <!-- title -->
+        <h2 class="fw-bold mb-2 mb-md-3"
+            style="color:#3d4a7a; font-size:1.6rem; letter-spacing:-0.3px;">
+            Electronic
+        </h2>
+
+        <!-- decribtion -->
+        <p class="mb-4 mb-md-5"
+           style="color:#3d4a7a; font-size:1rem;">
+            Hot devices, Latest trending
+        </p>
+
+        <!--  -->
+        <div class="d-flex justify-content-center align-items-end gap-2 gap-md-3">
+
+           
+<!--  -->
+            <div class="d-flex align-items-center justify-content-center"
+                 style="width:45%; max-width:220px; aspect-ratio:1.4/1;">
+                <img src="./imageeee/special3.png"
+                     alt="MacBook"
+                     class="img-fluid"
+                     style="max-height:100%; object-fit:contain;">
+            </div>
+           
+        </div>
+    </div>
+</section>
+    
+         
+    <!-- top panner -->
+    <div class="container">
+        <div class="top-banner mt-4" style="width: 100%; overflow: hidden; border-radius: 8px;">
+            <img src="./imageeee/panner.png" alt="Banner"
+                 style="width: 100%; height: auto; max-height: 120px; object-fit: cover; object-position: center; display: block; border-radius: 6px;">
+        </div>
+    </div>
+
+  
+    <!-- filter button -->
+    <div class="text-center mt-3">
+        <button class="btn border-0 fw-semibold px-4 py-2 rounded-2" style="background:#f0f2f5; color:#4a6b9c; font-size:1rem;">
+            <i class="fa-solid fa-sliders me-2"></i> All Filters
+        </button>
+    </div>
+
+    
+    <!-- showing results-->
+    <p class="text-center mt-4" style="color:#4a6b9c; font-size:1.1rem;">Showing 1–16 of 35 results</p>
+
+   
+    <!-- sort by +show -->
+    <div class="container">
+        <div class="d-flex align-items-center gap-4 mb-4 flex-wrap">
+            <div class="d-flex align-items-center gap-2">
+                <span style="color:#7a8ba3; font-size:1.05rem;">Sort by:</span>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle border-0 fw-semibold shadow-none px-2 py-1" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="background:transparent; color:#4a6b9c; font-size:1.05rem;">
+                        Latest products
+                    </button>
+                    <ul class="dropdown-menu p-0 overflow-hidden rounded-1" style="min-width:220px; border:1px solid #e0e6ed; box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+                        <li><a class="dropdown-item active py-3 px-3" href="#" style="color:#4a6b9c; font-size:1.05rem; background:#dde3eb; font-weight:500;">Latest products</a></li>
+                        <li><a class="dropdown-item py-3 px-3" href="#" style="color:#4a6b9c; font-size:1.05rem;">Oldest products</a></li>
+                        <li><a class="dropdown-item py-3 px-3" href="#" style="color:#4a6b9c; font-size:1.05rem;">Comments products</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <span style="color:#7a8ba3; font-size:1.05rem;">Show</span>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle border-0 fw-semibold shadow-none px-2 py-1" type="button" id="showDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="background:transparent; color:#4a6b9c; font-size:1.05rem;">
+                        30 items
+                    </button>
+                    <ul class="dropdown-menu p-0 overflow-hidden rounded-1" style="min-width:220px; border:1px solid #e0e6ed; box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+                        <li><a class="dropdown-item active py-3 px-3" href="#" style="color:#4a6b9c; font-size:1.05rem; background:#dde3eb; font-weight:500;">30 items</a></li>
+                        <li><a class="dropdown-item py-3 px-3" href="#" style="color:#4a6b9c; font-size:1.05rem;">50 items</a></li>
+                        <li><a class="dropdown-item py-3 px-3" href="#" style="color:#4a6b9c; font-size:1.05rem;">100 items</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ 
+ <section class="container my-4">
+
+    <!-- Header-->
+    <div class="d-flex justify-content-between align-items-center mb-2">
+        <h5 class="fw-bold mb-0" style="color:#425A8B; font-size:1.5rem;">
+            Best seller
+        </h5>
+
+        <!-- buttons  -->
+        <div class="d-flex gap-3">
+            <button class="btn p-0 border-0 shadow-none" type="button"
+                    data-bs-target="#bestSellerCarousel"
+                    data-bs-slide="prev"
+                    style="color:#4a6b9c; font-size:1.2rem;">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="btn p-0 border-0 shadow-none" type="button"
+                    data-bs-target="#bestSellerCarousel"
+                    data-bs-slide="next"
+                    style="color:#4a6b9c; font-size:1.2rem;">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+  
+            </aside>
+
+           
+            <!-- products  grid-->
+          
+<main class="col-lg-9 col-md-8 order-lg-2 order-1">
+    <div class="row g-3 g-md-4">
+        <!-- Card 1  -->
+        <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/laptop.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+<!-- card 2 -->
+         <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/aye.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+
+    <!-- card 3-->
+        <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/laptop1.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+
+        
+        <!-- card 4 -->
+         <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/ear.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+
+
+        
+        <!-- card 5 -->
+      <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/witch.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+
+        <!-- card 6 -->
+        <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/bag.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+
+       
+        <!-- card 7 -->
+         <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/laptop.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+
+        
+        <!-- card 8 -->
+       <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/aye.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+
+        <!-- card 9 -->
+     <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/ear.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+
+
+        <!-- card 10-->
+         <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/laptop1.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+
+
+         <!-- card 11-->
+        
+      <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/bag.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+
+       
+        
+       <!-- card 12 -->
+         <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/witch.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+
+     <!-- Card 13 -->
+        <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/laptop1.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+
+        
+        <!-- Card 14 -->
+         <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/aye.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+
+        <!-- Card 15 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-card h-100 p-3">
+                <span class="discount-badge">−17%</span>
+                <div class="quick-actions">
+                    <a href="#" class="action-btn" title="Compare"><i class="fa-solid fa-code-compare"></i></a>
+                    <a href="#" class="action-btn" title="Wishlist"><i class="fa-solid fa-heart"></i></a>
+                    <a href="#" class="action-btn" title="Refresh"><i class="fa-solid fa-arrows-rotate"></i></a>
+                    <a href="#" class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></a>
+                </div>
+                <div class="product-img-container">
+                    <img src="./imageeee/ear.png" alt="">
+                </div>
+                <div class="product-brand text-start mb-1">Apple</div>
+                <h5 class="product-title text-start mb-2">Apple Watch Series 7 GPS + Cellular, 41mm</h5>
+                <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+                <div class="mb-3 text-start">
+                    <span class="price-current">$2856.3</span>
+                    <span class="price-old">$3225.6</span>
+                </div>
+                <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+                <ul class="feature-list text-start mb-0">
+                    <li>27-inch (diagonal) Retina 5K display</li>
+                    <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+                    <li>AMD Radeon Pro 5300 graphics</li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <!-- card 16 -->
+         <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/bag.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+
+         
+        <!-- card 17 -->
+        <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/laptop.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+
+         
+        <!-- card 18 -->
+      <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/laptop1.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+
+        <!-- card 19 -->
+         <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/ear.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+        <!-- card 20 -->
+        <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/aye.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+
+        <!-- card 21 -->
+        <div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/bag.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+<!-- card 22 -->
+
+<div class="col-12 col-md-6 col-lg-4">
+    <div class="product-card h-100 p-3">
+        <span class="discount-badge">−17%</span>
+
+        <div class="quick-actions">
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Compare">
+                <i class="fa-solid fa-code-compare"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Add To Wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="Trend">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </a>
+            <a href="#" class="action-btn"
+               data-bs-toggle="tooltip" data-bs-placement="left"
+               title="View">
+                <i class="fa-regular fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="product-img-container">
+            <img src="./imageeee/laptop.png" alt="">
+        </div>
+        <div class="product-brand text-start mb-1">Apple</div>
+        <h5 class="product-title text-start mb-2">Dell Optiplex 9020 Small Form Business Desktop</h5>
+        <div class="rating mb-3 text-start">★★★★★ <span>(65)</span></div>
+        <div class="mb-3 text-start">
+            <span class="price-current">$2856.3</span>
+            <span class="price-old">$3225.6</span>
+        </div>
+        <button class="btn btn-add-cart w-100 mb-3">Add To Cart</button>
+        <ul class="feature-list text-start mb-0">
+            <li>27-inch (diagonal) Retina 5K display</li>
+            <li>3.1GHz 6-core 10th-generation Intel Core i5</li>
+            <li>AMD Radeon Pro 5300 graphics</li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+                <!-- Pagination -->
+                <nav aria-label="Page navigation" class="mt-5 px-2">
+                    <ul class="pagination flex-wrap justify-content-center gap-1 gap-sm-2 mb-0">
+                        <li class="page-item"><a class="page-link border-0 bg-transparent p-0 text-secondary" href="#" aria-label="Previous"><i class="bi bi-chevron-left"></i></a></li>
+                        <li class="page-item"><a class="page-link rounded-2 fw-semibold text-dark bg-white border px-3 py-2" href="#">1</a></li>
+                        <li class="page-item active" aria-current="page"><a class="page-link rounded-2 fw-semibold text-white bg-warning border-warning px-3 py-2" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link rounded-2 fw-semibold text-dark bg-white border px-3 py-2" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link rounded-2 fw-semibold text-dark bg-white border px-3 py-2" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link rounded-2 fw-semibold text-dark bg-white border px-3 py-2" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link rounded-2 fw-semibold text-dark bg-white border px-3 py-2" href="#">6</a></li>
+                        <li class="page-item"><a class="page-link border-0 bg-transparent p-0 text-secondary" href="#" aria-label="Next"><i class="bi bi-chevron-right"></i></a></li>
+                    </ul>
+                </nav>
+            </main>
+
+        </div>
+    </div>
+<!-- footer -->
+
+<footer class="footer bg-light pt-5 border-top">
+      <div class="container mb-5">
+        <div
+          class="p-4 p-md-5 rounded-4 position-relative overflow-hidden"
+          style="background-color: #425a8b; color: #fff"
+        >
+          <div class="row align-items-center g-3 position-relative z-2">
+            <div class="col-lg-6">
+              <h4 class="fw-bold mb-1">Subscribe & Get 10% Discount</h4>
+              <p class="text-dark small mb-0">
+                Get E-mail updates about our latest shop and special offers.
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <form class="d-flex gap-2">
+                <input
+                  type="email"
+                  class="form-control form-control-lg fs-6"
+                  placeholder="Your email address..."
+                  required
+                />
+                <button
+                  class="btn btn-warning btn-lg text-white fw-bold px-4 flex-shrink-0"
+                  type="submit"
+                  style="background-color: #ff6b35; border: none"
+                >
+                  Sign Up
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mb-4">
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-3">
+            <h6 class="fw-bold mb-3 text-dark">Contact</h6>
+            <p class="text-muted small mb-2">
+              <strong>Address:</strong> 502 New Design Str, Melbourne, San
+              Francisco, CA 94110, United States
+            </p>
+            <p class="text-muted small mb-2">
+              <strong>Phone:</strong> (+01) 123-456-789
+            </p>
+            <p class="text-muted small mb-2">
+              <strong>E-mail:</strong> contact@ecom-market.com
+            </p>
+            <p class="text-muted small mb-3">
+              <strong>Hours:</strong> 8:00 - 17:00, Mon - Sat
+            </p>
+            <div class="d-flex gap-2 text-primary">
+              <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <h6 class="fw-bold mb-3 text-dark">Make Money with Us</h6>
+            <ul
+              class="list-unstyled small text-muted d-flex flex-column gap-2 mb-0"
+            >
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >› Mission & Vision</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >› Our Team</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >› Careers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >› Press & Media</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >› Advertising</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >› Testimonials</a
+                >
+              </li>
+            </ul>
+          </div><div class="col-6 col-md-3 col-lg-2">
+            <h6 class="fw-bold mb-3 text-dark">Company</h6>
+            <ul
+              class="list-unstyled small text-muted d-flex flex-column gap-2 mb-0"
+            >
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >› Our Blog</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >› Plans & Pricing</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >› Knowledge Base</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >› Cookie Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >› Office Center</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >› News & Events</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 col-lg-2">
+            <h6 class="fw-bold mb-3 text-dark">My account</h6>
+            <ul
+              class="list-unstyled small text-muted d-flex flex-column gap-2 mb-0"
+            >
+              <li>
+                <a href="#" class="text-decoration-none text-muted">› FAQs</a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >› Editor Help</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >› Community</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >› Live Chatting</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >› Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-muted"
+                  >› Support Center</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-3 col-lg-3">
+            <h6 class="fw-bold mb-3 text-dark">App & Payment</h6>
+            <p class="text-muted small mb-3">
+              Download our Apps and get extra 15% Discount on your first
+              Order...!
+            </p>
+            <div class="d-flex gap-2 mb-3">
+              <a href="#"
+                ><img
+                  src="./images/Ecom - Ecom Marketplace Template_files/google-play.png"
+                  alt=""
+                  style="height: 35px"
+              /></a>
+              <a href="#"
+                ><img src="./images/appstore.png" alt="" style="height: 35px"
+              /></a>
+            </div>
+            <p class="text-muted small mb-1">Secured Payment Gateways</p>
+            <div class="d-flex gap-2 align-items-center fs-4 text-secondary">
+              <img
+                src="./images/Ecom - Ecom Marketplace Template_files/payment-method.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div><div class="py-4 border-top" style="background-color: #eef2f5">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+            <h4 class="fw-bold text-primary mb-0 me-3">
+              <img src="./images/logo.svg" alt="" />
+            </h4>
+            <div class="d-flex flex-wrap gap-3 small text-muted">
+              <a href="#" class="text-muted text-decoration-none"
+                >EcomMarket.com</a>
+              
+              
+              <a href="#" class="text-muted text-decoration-none"
+                >Ecom Partners</a>
+              
+              
+              <a href="#" class="text-muted text-decoration-none"
+                >Ecom Business</a>
+              
+              
+              <a href="#" class="text-muted text-decoration-none"
+                >Ecom Factory</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="small text-muted mb-3"
+            style="font-size: 13px; line-height: 1.8"
+          >
+            <span class="fw-bold text-dark me-2">Electronic:</span>
+            <a href="#" class="text-muted text-decoration-none">Cell Phones</a>
+            
+            <a href="#" class="text-muted text-decoration-none me-2 ms-2"
+              >Headphones</a>
+            
+            
+            <a href="#" class="text-muted text-decoration-none me-2 ms-2"
+              >Television & Video</a>
+            
+            
+            <a href="#" class="text-muted text-decoration-none me-2 ms-2"
+              >Game Controller</a>
+            
+            
+            <a href="#" class="text-muted text-decoration-none ms-2 me-2"
+              >Apple Watch</a>
+            
+            
+            <a href="#" class="text-muted text-decoration-none ms-2 me-2"
+              >HTC</a>
+            
+            
+            <a href="#" class="text-muted text-decoration-none ms-2 me-2"
+              >Ipad</a>
+            
+            
+            <a href="#" class="text-muted text-decoration-none ms-2 me-2"
+              >Keyboard</a>
+            
+    
+            <a href="#" class="text-muted text-decoration-none ms-2 me-2"
+              >Samsung</a >
+           
+            
+            <a href="#" class="text-muted text-decoration-none ms-2 me-2"
+              >Wireless Speaker</a
+            >
+            <br />
+            <span class="fw-bold text-dark me-2">Furniture:</span>
+            <a href="#" class="text-muted text-decoration-none ms-2 me-2"
+              >Sofa</a
+            >
+            
+            <a href="#" class="text-muted text-decoration-none ms-2 me-2"
+              >Chair</a
+            >
+            
+            <a href="#" class="text-muted text-decoration-none ms-2 me-2"
+              >Dining Table</a>
+            
+          
+            <a href="#" class="text-muted text-decoration-none ms-2 me-2"
+              >Living Room</a>
+            
+            <a href="#" class="text-muted text-decoration-none ms-2 me-2"
+              >Table Lamp</a>
+            
+            
+            <a href="#" class="text-muted text-decoration-none ms-2 me-2"
+              >Night Stand</a>
+            
+            
+            <a href="#" class="text-muted text-decoration-none ms-2 me-2"
+              >Computer Desk</a>
+            
+            
+            <a href="#" class="text-muted text-decoration-none ms-2 me-2"
+              >Bar Table</a>
+            
+          </div>
+          <div
+            class="d-flex flex-wrap justify-content-between align-items-center small text-muted border-top pt-3"
+            style="font-size: 12px"
+          >
+            <span>Copyright 2022 Ecom Market. All rights reserved.</span>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-muted text-decoration-none"
+                >Conditions of Use</a
+              >
+              <a href="#" class="text-muted text-decoration-none"
+                >Privacy Notice</a
+              >
+              <a href="#" class="text-muted text-decoration-none"
+                >Interest-Based Ads</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+         <!-- scroll top button -->
+    
+    <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    
+         
+   
+    
+         
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        // Tooltips
+        document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+            new bootstrap.Tooltip(el);
+        });
+
+        // See More
+        const toggleBtn = document.getElementById('toggleBtn');
+        const extraCategories = document.getElementById('extraCategories');
+        if (toggleBtn && extraCategories) {
+            toggleBtn.addEventListener('click', function() {
+                extraCategories.classList.toggle('show');
+                if (extraCategories.classList.contains('show')) {
+                    toggleBtn.innerHTML = 'See Less <span style="font-size: 0.7rem;">&#9650;</span>';
+                } else {
+                    toggleBtn.innerHTML = 'See More <span style="font-size: 0.7rem;">&#9660;</span>';
+                }
+            });
+        }
+
+        // Price Range
+        const priceRange = document.getElementById('priceRange');
+        const priceValue = document.getElementById('priceValue');
+        if (priceRange && priceValue) {
+            priceRange.addEventListener('input', function() {
+                priceValue.textContent = this.value;
+            });
+        }
+
+        // Color Toggle
+        window.toggleColor = function(el) {
+            document.querySelectorAll('.color-item').forEach(item => {
+                item.classList.remove('selected');
+            });
+            el.classList.add('selected');
+        };
+    });
+</script> 
+    
+    
+    
+    
+    
+   <script>
+    const priceRangeEl = document.getElementById('priceRange');
+    if (priceRangeEl) {
+        function updateRangeProgress() {
+            const min = +priceRangeEl.min;
+            const max = +priceRangeEl.max;
+            const val = +priceRangeEl.value;
+            const percent = ((val - min) / (max - min)) * 100;
+            priceRangeEl.style.setProperty('--range-progress', percent + '%');
+        }
+        priceRangeEl.addEventListener('input', updateRangeProgress);
+        updateRangeProgress();
+    }
+</script> 
+    
+  
+    
+    
+    
+    
+    
+</body>
+</html>
